@@ -19,7 +19,8 @@ def main() -> None:
     assert 1 <= len(TIP) <= 200, f"tip is {len(TIP)} characters"
     os.makedirs("/output", exist_ok=True)
     with open("/output/entry.txt", "w", encoding="utf-8") as f:
-        f.write(TIP)
+        f.write(TIP + "\n")
+    print(f"tip ({len(TIP)} chars): {TIP}")
 
 
 if __name__ == "__main__":
